@@ -1,13 +1,13 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet, GestureResponderEvent } from 'react-native';
+import { TouchableOpacity, Text, GestureResponderEvent } from 'react-native';
 import { styles } from './styles';
 
-type ButtonProps = {
+type BlueButtonProps = {
   title: string;
   onPress: (event: GestureResponderEvent) => void;
 };
 
-const Button: React.FC<ButtonProps> = ({ title, onPress }) => {
+const BlueButton: React.FC<BlueButtonProps> = ({ title, onPress }) => {
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.text}>{title}</Text>
@@ -15,4 +15,4 @@ const Button: React.FC<ButtonProps> = ({ title, onPress }) => {
   );
 };
 
-export default Button;
+export default BlueButton;

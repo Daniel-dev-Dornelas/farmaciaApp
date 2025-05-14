@@ -1,11 +1,18 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-import { Button } from '../../components';
-import { styles } from './styles';
+import React from "react";
+import { View, Text } from "react-native";
+import { BlueButton } from "../../components";
+import { styles } from "./styles";
+import { useNavigation } from "@react-navigation/native";
+import { Button } from "@react-navigation/elements";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../../types";
+
+type NavigationProp = NativeStackNavigationProp<RootStackParamList, "Home">;
 
 const Home: React.FC = () => {
+  const navigation = useNavigation<NavigationProp>();
   const handlePress = () => {
-    console.log('Botão da Home pressionado');
+    console.log("Botão da Home pressionado");
   };
 
   return (
@@ -14,11 +21,12 @@ const Home: React.FC = () => {
       <Text style={styles.description}>
         Esta é uma tela inicial simples em React Native.
       </Text>
-      <Button title="Toque aqui" onPress={handlePress} />
+      <BlueButton title="Toque aqui" onPress={handlePress} />
+      <Button onPress={() => navigation.navigate("OnboardingScreen")}>
+        Go to Onboarding
+      </Button>
     </View>
   );
 };
-
-
 
 export default Home;
