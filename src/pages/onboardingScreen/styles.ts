@@ -7,21 +7,6 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#f9f9f9",
   },
-  header: {
-    width: "100%",
-    height: 120,
-    overflow: "hidden",
-    position: "relative",
-  },
-  image: {
-    width: "100%",
-    height: "100%",
-    resizeMode: "cover",
-    alignSelf: "flex-start",
-  },
-  gradient: {
-    ...StyleSheet.absoluteFillObject, 
-  },
    centerImageContainer: {
     justifyContent: "center",
     alignItems: "center"
@@ -62,5 +47,8 @@ export const styles = StyleSheet.create({
     color: "#00ADEF",
     fontWeight: "bold",
     fontSize: 18
+  },
+  box: {
+    padding: 16
   }
 });

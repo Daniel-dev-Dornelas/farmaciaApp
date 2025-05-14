@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 export default function Router() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="OnboardingScreen">
         <Stack.Screen name="Home" component={Home} options={{ title: 'Página Inicial' }} />
         <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} options={{ title: 'Tela de Onboarding' }} />
       </Stack.Navigator>

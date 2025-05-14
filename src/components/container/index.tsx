@@ -4,18 +4,19 @@ import { styles } from "./styles";
 
 
 type ContainerProps = {
-  variant?: "header" | "main";
+  variant?: "card" | "main" | "mainBlue";
   children?: React.ReactNode;
 };
 
 const Container: React.FC<ContainerProps> = ({
-  variant = "main",
+  variant,
   children,
 }) => {
   const containerStyle = [
     styles.container,
-    variant === "header" && styles.header,
+    variant === "card" && styles.card,
     variant === "main" && styles.main,
+    variant === "mainBlue" && styles.mainBlue,
   ];
 
   return <View style={containerStyle}>{children}</View>;

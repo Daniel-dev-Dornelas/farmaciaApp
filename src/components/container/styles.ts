@@ -1,16 +1,23 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffffff",
   },
-  header: {
-    padding: 0
+  card: {
+    padding: 16,
+    backgroundColor: "white",
+    flex: 0,
   },
   main: {
-    padding: 16,
     flexDirection: "column",
-    justifyContent: "space-between"
+    gap: 16,
+    backgroundColor: "white",
+  },
+  mainBlue: {
+    flexDirection: "column",
+    gap: 16,
+    backgroundColor: "#00ADEF",
+    paddingBottom: 16
   },
 });
